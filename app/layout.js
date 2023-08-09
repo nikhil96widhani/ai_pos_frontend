@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import BaseWithDrawer from "@/components/base_theme/base";
 import CssBaseline from "@mui/material/CssBaseline";
+import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,7 +15,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <CssBaseline/>
       <body className={inter.className}>
+      <ThemeRegistry>
         <BaseWithDrawer admin={true} main_content={children} />
+      </ThemeRegistry>
       </body>
     </html>
   )

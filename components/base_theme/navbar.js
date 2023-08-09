@@ -16,6 +16,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import ThemeToggle from "@/components/ThemeRegistry/ThemeToggle";
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -208,6 +209,7 @@ export default function PrimarySearchAppBar(props) {
                 <NotificationsIcon />
               </Badge>
             </IconButton>
+            <ThemeToggle />
             <IconButton
               size="large"
               edge="end"
@@ -221,6 +223,7 @@ export default function PrimarySearchAppBar(props) {
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+            {/*<ThemeToggle />*/}
             <IconButton
               size="large"
               aria-label="show more"
@@ -239,3 +242,4 @@ export default function PrimarySearchAppBar(props) {
     </Box>
   );
 }
+
