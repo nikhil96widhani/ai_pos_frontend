@@ -9,20 +9,12 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 
-const DrawerContent = ({ anchor, toggleDrawer, MarginT }) => {
-  const handleToggleDrawer = (event) => {
-    if (toggleDrawer) {
-      toggleDrawer(anchor, false)(event);
-    }
-  };
-
+const DrawerContent = ({ anchor, marginT }) => {
   return (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 ,
-    mt:MarginT }}
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250,
+    mt:marginT }}
       role="presentation"
-      onClick={handleToggleDrawer}
-      onKeyDown={handleToggleDrawer}
     >
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (

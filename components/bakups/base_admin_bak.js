@@ -4,12 +4,9 @@ import Drawer from '@mui/material/Drawer';
 import MiniDrawer from "@/components/base_theme/sidebar";
 import DrawerContent from "@/components/base_theme/sidebar_menu_items";
 
-export default function TemporaryDrawer() {
+export default function BaseWithDrawer(props) {
   const [state, setState] = React.useState({
-    top: false,
     left: false,
-    bottom: false,
-    right: false,
   });
 
 
@@ -23,7 +20,7 @@ export default function TemporaryDrawer() {
     const anchor = 'left'
   return (
     <div>
-     <MiniDrawer swipableDrawerToggle={toggleDrawer('left', true)}/>
+     <MiniDrawer swipableDrawerToggle={toggleDrawer('left', true)} main_content={props.main_content}/>
         <React.Fragment key={anchor}>
           {/*<Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>*/}
           <Drawer
